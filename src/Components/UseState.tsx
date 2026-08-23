@@ -1,15 +1,17 @@
 import React from "react"
 
 export function UseState(){
-    const [result, func] = React.useState("Yes")
-    console.log(result)
+  let [isImportant, setIsImportant] = React.useState("Yes")
 
+  function handleClick(){
+    setIsImportant("Heck Yes")
+  }
   
 
     return<>
     <main>
         <h1>Is state important to know</h1>
-        <button >{result}</button>
+        <button onClick={handleClick}>{isImportant}</button>
     </main>
 
     
