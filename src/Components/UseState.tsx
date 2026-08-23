@@ -1,17 +1,26 @@
 import React from "react"
 
 export function UseState(){
-  let [isImportant, setIsImportant] = React.useState("Yes")
 
-  function handleClick(){
-    setIsImportant("Heck Yes")
+  const [count, setCount] = React.useState(0)
+
+  function add(){
+    setCount(count+1)
   }
-  
 
+  function deduct(){
+    setCount(count-1)
+  }
     return<>
     <main>
-        <h1>Is state important to know</h1>
-        <button onClick={handleClick}>{isImportant}</button>
+        <h1>How mamy times will ob say "state" in this section?</h1>
+        <div>
+     
+        <button aria-label="Decrease" onClick={deduct}>-</button>
+        <h2>{count}</h2> 
+        <button aria-label="Increase" onClick={add}>+</button> 
+        </div>
+        
     </main>
 
     
