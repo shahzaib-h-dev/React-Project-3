@@ -5,11 +5,11 @@ export function UseState(){
   const [count, setCount] = React.useState(0)
 
   function add(){
-    setCount(count+1)
+    setCount(prevCount =>prevCount + 1)
   }
 
   function deduct(){
-    setCount(count-1)
+  setCount(prevCount =>prevCount - 1)
   }
     return<>
     <main>
