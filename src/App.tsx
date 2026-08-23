@@ -1,4 +1,5 @@
 import { APITester } from "./APITester";
+import { FrontPage } from "./Components/FrontPage";
 import { Header } from "./Components/Header";
 import "./index.css"; 
 import logo from "./logo.svg";
@@ -11,7 +12,7 @@ export function App() {
 
   return (
     <div>
-     <Header/>
+     <FrontPage/>
     </div>
   );
 }
