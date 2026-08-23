@@ -1,7 +1,7 @@
 import React from "react"
 
 export function UseState(){
-    const result = React.useState("Yes")
+    const [result, func] = React.useState("Yes")
     console.log(result)
 
   
@@ -9,7 +9,7 @@ export function UseState(){
     return<>
     <main>
         <h1>Is state important to know</h1>
-        <button >{result[0]}</button>
+        <button >{result}</button>
     </main>
 
     
