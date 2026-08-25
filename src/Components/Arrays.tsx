@@ -4,7 +4,7 @@ import React from "react"
 
    const [myFavoriteThings, setMyFavoriteThings] = React.useState<string[]>([]);
     const allFavoriteThings = ["rose", "lemon", "apple", "mango"]
-    const thingsElements = myFavoriteThings.map(thing => <p key={(thing)}>{thing}</p>)
+    const thingsElements = myFavoriteThings.map(thing => <p key={thing}>{thing}</p>)
     
     function addFavoriteThing(){
         setMyFavoriteThings(prevFavThings =>[...prevFavThings, allFavoriteThings[prevFavThings.length]!])

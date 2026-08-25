@@ -13,9 +13,9 @@ export function App() {
 
   return (
     <div>
-    {/*  <FrontPage/> */}
+    <FrontPage/> 
     {/* <UseState/> */}
-    <Array/>
+    {/* <Array/> */}
 
     </div>
   );
