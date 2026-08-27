@@ -17,13 +17,13 @@ export function App() {
 
   return (
     <div>
-    {/* <FrontPage/>  */}
+    <FrontPage/>  
     {/* <UseState/> */}
     {/* <Array/> */}
     {/* <Objects/> */}
     {/* <Forms/> */}
     {/* <ConditionalRendering/> */} 
-    <Practice/> 
+    {/* <Practice/>  */}
     </div>
   );
 }

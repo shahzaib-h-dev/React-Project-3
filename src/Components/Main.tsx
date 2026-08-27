@@ -24,9 +24,21 @@ export function Main(){
          aria-label="Add ingredient"/>
         <button> Add ingredient</button>
     </form>
-    <ul>
-       {ingredientListItems}
-    </ul>
+
+  {
+    ingredients.length > 0 &&
+    <section className="ingredients-section">
+    <h2>Ingredients on hand:</h2>
+    <ul className="ingredients-list">{ingredientListItems}</ul>
+    
+    <div className="recipe-container">
+        <div className="recipe-text">
+         <h3>Ready for a recipe? </h3>
+         <p>Generate a recipe from your list of ingredients.</p>
+        </div>
+        <button className="get-recipe-btn">Get recipe</button>
+    </div>
+  </section>}
    </main>
     
     </>
