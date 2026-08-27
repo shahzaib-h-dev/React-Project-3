@@ -10,6 +10,7 @@ import reactLogo from "./react.svg";
 import { createElement } from "react";
 import { Forms } from "./Components/Forms";
 import { ConditionalRendering } from "./Components/ConditionalRendering";
+import { Practice } from "./Components/Practice";
  
 
 export function App() {
@@ -21,7 +22,8 @@ export function App() {
     {/* <Array/> */}
     {/* <Objects/> */}
     {/* <Forms/> */}
-    <ConditionalRendering/>
+    {/* <ConditionalRendering/> */}
+    <Practice/>
     </div>
   );
 }
