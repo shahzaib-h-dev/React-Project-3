@@ -22,8 +22,8 @@ export function App() {
     {/* <Array/> */}
     {/* <Objects/> */}
     {/* <Forms/> */}
-    <ConditionalRendering/> 
-    {/*  <Practice/> */}
+    {/* <ConditionalRendering/> */} 
+    <Practice/> 
     </div>
   );
 }
