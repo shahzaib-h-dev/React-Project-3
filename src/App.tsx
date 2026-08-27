@@ -15,11 +15,11 @@ export function App() {
 
   return (
     <div>
-    <FrontPage/> 
+    {/* <FrontPage/>  */}
     {/* <UseState/> */}
     {/* <Array/> */}
     {/* <Objects/> */}
-{/*     <Forms/> */}
+    <Forms/>
     </div>
   );
 }

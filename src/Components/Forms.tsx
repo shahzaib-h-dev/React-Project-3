@@ -19,6 +19,7 @@ export function Forms() {
                         id="email" 
                         type="email" 
                         name="email" 
+                        defaultValue="shahzaibhassan@gmail.com"
                         placeholder="shahzaib@gmail.com" 
                         className="signup-input"
                     />
@@ -30,9 +31,12 @@ export function Forms() {
                         id="password" 
                         type="password" 
                         name="password" 
+                        defaultValue="12345678"
                         className="signup-input"
                     />
                 </div>
+                <label htmlFor="description"> Description:</label>
+                <textarea name="description" id="description"></textarea>
                 
                 <button type="button" className="signup-button">Submit</button>           
             </form>
