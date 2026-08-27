@@ -9,6 +9,7 @@ import reactLogo from "./react.svg";
 
 import { createElement } from "react";
 import { Forms } from "./Components/Forms";
+import { ConditionalRendering } from "./Components/ConditionalRendering";
  
 
 export function App() {
@@ -19,7 +20,8 @@ export function App() {
     {/* <UseState/> */}
     {/* <Array/> */}
     {/* <Objects/> */}
-    <Forms/>
+    {/* <Forms/> */}
+    <ConditionalRendering/>
     </div>
   );
 }
