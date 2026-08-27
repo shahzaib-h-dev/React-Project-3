@@ -2,21 +2,17 @@ import React from "react";
 
 export function Forms() {
 
-    function handleSubmit(event: any){
-        event.preventDefault()
-        const formEl = event.currentTarget
-        const formData = new FormData(formEl)
+    function signUp(formData: any){
         const email = formData.get("email")
-        console.log(email)
-        formEl.reset()
-
+        const password = formData.get("password")
+        
     }
 
     return (
         <section className="signup-container">
             <h1 className="signup-title">Signup form</h1>
             
-            <form onSubmit={handleSubmit} className="signup-form" method="post"> 
+            <form action={signUp} className="signup-form"> 
                 <div className="input-group">
                     <label htmlFor="email">Email:</label>
                     <input 
