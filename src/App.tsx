@@ -8,6 +8,7 @@ import logo from "./logo.svg";
 import reactLogo from "./react.svg";
 
 import { createElement } from "react";
+import { Forms } from "./Components/Forms";
  
 
 export function App() {
@@ -17,7 +18,8 @@ export function App() {
     {/* <FrontPage/>  */}
     {/* <UseState/> */}
     {/* <Array/> */}
-    <Objects/>
+    {/* <Objects/> */}
+    <Forms/>
     </div>
   );
 }
