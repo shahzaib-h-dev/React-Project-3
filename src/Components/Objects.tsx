@@ -15,6 +15,9 @@ export function Objects(){
     let starIcon = contact.isFavrorite ? starFilled :starEmpty 
 
     function toggleFavorite(){
+        setContact(prevContact => {
+            return{ ...prevContact,isFavrorite: !prevContact.isFavrorite}
+        })
         console.log("Toggle Favorite")
     }
 
