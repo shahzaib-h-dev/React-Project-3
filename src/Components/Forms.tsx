@@ -5,6 +5,9 @@ export function Forms() {
     function signUp(formData: any){
         const email = formData.get("email")
         const password = formData.get("password")
+        const employementStatus = formData.get("employementStatus")
+        const description = formData.get("description")
+         
         
     }
 
@@ -35,9 +38,32 @@ export function Forms() {
                         className="signup-input"
                     />
                 </div>
+                <div className="input-group">
                 <label htmlFor="description"> Description:</label>
-                <textarea name="description" id="description"></textarea>
-                
+                <textarea name="description" id="description" defaultValue="This is a description"></textarea>
+                </div>
+
+                <br />
+                <br />
+
+            <fieldset className="radioFieldSet">
+                <legend>Employment Status</legend>
+               <label htmlFor="" className="radio"> 
+                <input type="radio" name="employementStatus" value="Unemployed" />
+                Unemployed
+               </label >
+
+               <label htmlFor="" className="radio"> 
+                <input type="radio" name="employementStatus" value="Part-Time" />
+                Part-Time
+               </label >
+
+               <label htmlFor="" className="radio"> 
+                <input type="radio" name="employementStatus" value="Full-Time" />
+                Full-Time
+               </label >
+            </fieldset>
+ 
                 <button type="button" className="signup-button">Submit</button>           
             </form>
         </section>

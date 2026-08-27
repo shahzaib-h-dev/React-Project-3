@@ -112,3 +112,14 @@ body{
 .signup-button:hover {
     background-color: #e2e2e2;
 }
+
+.radio{
+  align-items: left;
+}
+
+.radioFieldSet{
+  border: 1px solid #262626;
+  margin-bottom:20px;
+  display: flex;
+  flex-direction: column;
+}
