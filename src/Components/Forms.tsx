@@ -7,6 +7,7 @@ export function Forms() {
         const password = formData.get("password")
         const employementStatus = formData.get("employementStatus")
         const description = formData.get("description")
+        const dietaryRestrictions = formData.getAll("dietaryRestrictions")
          
         
     }
@@ -61,6 +62,24 @@ export function Forms() {
                <label htmlFor="" className="radio"> 
                 <input type="radio" name="employementStatus" value="Full-Time" />
                 Full-Time
+               </label >
+            </fieldset>
+
+            <fieldset className="radioFieldSet">
+                <legend>Dietary restrictions: </legend>
+               <label htmlFor="" className="radio"> 
+                <input type="checkbox" name="dietaryRestrictions" value="Koshar" />
+                Koshar
+               </label >
+
+               <label htmlFor="" className="radio"> 
+                <input type="checkbox" name="dietaryRestrictions" value="Vegan" />
+                Vegan
+               </label >
+
+               <label htmlFor="" className="radio"> 
+                <input type="checkbox" name="dietaryRestrictions" value="Gluten-Free" />
+                Gluten-Free
                </label >
             </fieldset>
  
