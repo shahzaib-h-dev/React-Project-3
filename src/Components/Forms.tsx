@@ -8,6 +8,8 @@ export function Forms() {
         const employementStatus = formData.get("employementStatus")
         const description = formData.get("description")
         const dietaryRestrictions = formData.getAll("dietaryRestrictions")
+        const favColor = formData.get("favColor")
+        console.log(favColor)
          
         
     }
@@ -50,17 +52,17 @@ export function Forms() {
             <fieldset className="radioFieldSet">
                 <legend>Employment Status</legend>
                <label htmlFor="" className="radio"> 
-                <input type="radio" name="employementStatus" value="Unemployed" />
+                <input type="radio" name="employementStatus" value="unemployed" />
                 Unemployed
                </label >
 
                <label htmlFor="" className="radio"> 
-                <input type="radio" name="employementStatus" value="Part-Time" />
+                <input type="radio" name="employementStatus" value="partTime" />
                 Part-Time
                </label >
 
                <label htmlFor="" className="radio"> 
-                <input type="radio" name="employementStatus" value="Full-Time" />
+                <input type="radio" name="employementStatus" value="fullTime" />
                 Full-Time
                </label >
             </fieldset>
@@ -68,21 +70,31 @@ export function Forms() {
             <fieldset className="radioFieldSet">
                 <legend>Dietary restrictions: </legend>
                <label htmlFor="" className="radio"> 
-                <input type="checkbox" name="dietaryRestrictions" value="Koshar" />
+                <input type="checkbox" name="dietaryRestrictions" value="koshar" />
                 Koshar
                </label >
 
                <label htmlFor="" className="radio"> 
-                <input type="checkbox" name="dietaryRestrictions" value="Vegan" />
+                <input type="checkbox" name="dietaryRestrictions" value="vegan" />
                 Vegan
                </label >
 
                <label htmlFor="" className="radio"> 
-                <input type="checkbox" name="dietaryRestrictions" value="Gluten-Free" />
+                <input type="checkbox" name="dietaryRestrictions" value="glutenFree" />
                 Gluten-Free
                </label >
             </fieldset>
- 
+  
+            <label className="input-group" htmlFor="favColor">What is your favorite color ?</label> 
+            <select id="favColor" name="favColor" defaultValue="">
+                <option value="" disabled>-- Choose a color --</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="orange">Orange</option>
+                <option value="brown">Brown</option>
+                <option value="black">Black</option>
+                <option value="blue">Blue</option>
+            </select>
                 <button type="button" className="signup-button">Submit</button>           
             </form>
         </section>
