@@ -14,6 +14,7 @@ import { Practice } from "./Components/Practice";
 import { Counter } from "./Components/Counter";
 import { PracticeStateProp } from "./Components/PracticeStateProp";
 import { Challenge } from "./Components/Challenge";
+
  
 
 export function App() {
@@ -29,7 +30,7 @@ export function App() {
     {/* <Practice/>  */}
     {/* <Counter/>  */}
     {/* <PracticeStateProp/> */}
-    <Challenge/>
+    <Challenge darkMode={true}/>
     </div>
   );
 }
