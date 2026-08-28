@@ -245,3 +245,59 @@ body{
         transform: translateY(0); 
     }
 }
+
+.counter-wrapper {
+    background-color: #2b2826;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+}
+
+
+.counter--button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%; /* Circle banane ke liye */
+    border: none;
+    background-color: #737373;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2; /* Taake button white circle ke oopar nazar aye */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter--button:hover {
+    background-color: #555555;
+}
+
+.counter--button.minus {
+    margin-right: -25px; 
+}
+
+.counter--button.plus {
+    margin-left: -25px;
+}
+
+.counter--count {
+    background-color: white;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+    z-index: 1; 
+}

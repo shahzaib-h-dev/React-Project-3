@@ -11,19 +11,21 @@ import { createElement } from "react";
 import { Forms } from "./Components/Forms";
 import { ConditionalRendering } from "./Components/ConditionalRendering";
 import { Practice } from "./Components/Practice";
+import { StateNProp } from "./Components/StateNProp";
  
 
 export function App() {
 
   return (
     <div>
-    <FrontPage/>  
+    {/* <FrontPage/>  */} 
     {/* <UseState/> */}
-    {/* <Array/> */}
+    {/* <Array/>  */}
     {/* <Objects/> */}
     {/* <Forms/> */}
     {/* <ConditionalRendering/> */} 
     {/* <Practice/>  */}
+    <StateNProp/>
     </div>
   );
 }
