@@ -12,20 +12,22 @@ import { Forms } from "./Components/Forms";
 import { ConditionalRendering } from "./Components/ConditionalRendering";
 import { Practice } from "./Components/Practice";
 import { Counter } from "./Components/Counter";
+import { PracticeStateProp } from "./Components/PracticeStateProp";
  
 
 export function App() {
 
   return (
     <div>
-    {/* <FrontPage/>  */} 
+   {/*  <FrontPage/> */} 
     {/* <UseState/> */}
     {/* <Array/>  */}
     {/* <Card/> */} 
     {/* <Forms/> */}
     {/* <ConditionalRendering/> */} 
     {/* <Practice/>  */}
-    <Counter/> 
+    {/* <Counter/>  */}
+    <PracticeStateProp/>
     </div>
   );
 }
