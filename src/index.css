@@ -365,3 +365,32 @@ body{
     color: #666; /* Gray text color */
     margin: 4px 0;
 }
+
+
+
+.main-container {
+    background-color: #1c1c1c; 
+    min-height: 100vh;
+    padding: 40px 20px; 
+}
+
+.pad-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px;
+    max-width: 450px; 
+    margin: 0 auto;
+}
+
+.pad-button {
+    background-color: #eaeaea; 
+    border: none;
+    border-radius: 8px;
+    height: 100px; 
+    cursor: pointer;
+    transition: 0.2s; 
+}
+
+.pad-button:hover {
+    background-color: #ffffff;
+}

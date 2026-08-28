@@ -13,13 +13,14 @@ import { ConditionalRendering } from "./Components/ConditionalRendering";
 import { Practice } from "./Components/Practice";
 import { Counter } from "./Components/Counter";
 import { PracticeStateProp } from "./Components/PracticeStateProp";
+import { Challenge } from "./Components/Challenge";
  
 
 export function App() {
 
   return (
     <div>
-   {/*  <FrontPage/> */} 
+    {/*  <FrontPage/> */} 
     {/* <UseState/> */}
     {/* <Array/>  */}
     {/* <Card/> */} 
@@ -27,7 +28,8 @@ export function App() {
     {/* <ConditionalRendering/> */} 
     {/* <Practice/>  */}
     {/* <Counter/>  */}
-    <PracticeStateProp/>
+    {/* <PracticeStateProp/> */}
+    <Challenge/>
     </div>
   );
 }
