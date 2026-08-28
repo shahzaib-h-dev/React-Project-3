@@ -21,7 +21,7 @@ export function App() {
 
   return (
     <div>
-    {/*  <FrontPage/> */} 
+    <FrontPage/> 
     {/* <UseState/> */}
     {/* <Array/>  */}
     {/* <Card/> */} 
@@ -30,7 +30,7 @@ export function App() {
     {/* <Practice/>  */}
     {/* <Counter/>  */}
     {/* <PracticeStateProp/> */}
-    <Challenge darkMode={true}/>
+    {/* <Challenge darkMode={true}/> */}
     </div>
   );
 }
