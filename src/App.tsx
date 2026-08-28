@@ -2,7 +2,7 @@ import { APITester } from "./APITester";
 import { FrontPage } from "./Components/FrontPage";
 import { Header } from "./Components/Header";
 import { UseState } from "./Components/UseState";
-import { Objects } from "./Components/Objects";
+import { Card } from "./Components/Card";
 import "./index.css"; 
 import logo from "./logo.svg";
 import reactLogo from "./react.svg";
@@ -11,7 +11,7 @@ import { createElement } from "react";
 import { Forms } from "./Components/Forms";
 import { ConditionalRendering } from "./Components/ConditionalRendering";
 import { Practice } from "./Components/Practice";
-import { StateNProp } from "./Components/StateNProp";
+import { Counter } from "./Components/Counter";
  
 
 export function App() {
@@ -21,11 +21,11 @@ export function App() {
     {/* <FrontPage/>  */} 
     {/* <UseState/> */}
     {/* <Array/>  */}
-    {/* <Objects/> */}
+    {/* <Card/> */} 
     {/* <Forms/> */}
     {/* <ConditionalRendering/> */} 
     {/* <Practice/>  */}
-    <StateNProp/>
+    <Counter/> 
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react"
 import { Count } from "./Count"
 
-export function StateNProp() {
+export function Counter() {
     const [count, setCount] = React.useState(0)
 
     function add() {
