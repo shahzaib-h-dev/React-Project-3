@@ -1,19 +1,19 @@
 import React from "react"
 import { ClaudeRecipe } from "./ClaudeRecipe";
 import { IngredientsList } from "./IngredientsList";
+import { getRecipeFromMistral } from "./Ai"; // <-- Yeh line Ai.tsx se data la rahi hai
 
 export function Main(){
     
-    const [ingredients, setIngredients] = React.useState<string[]>([
-        "all the main spices", "pasta", "ground beef", "tomato paste"
-    ]); 
- 
+    const [ingredients, setIngredients] = React.useState<string[]>([])
+    const [recipe, setRecipe] = React.useState("")
 
-
-    const [recipeShown, setRecipeShown] = React.useState(false)
-
-    function toggleRecipeShown(){
-        setRecipeShown(prevShown => !prevShown)
+    async function getRecipe(){
+        const generatedRecipeMarkdown = await getRecipeFromMistral(ingredients)
+        // Ensure string is returned before setting state
+        if (typeof generatedRecipeMarkdown === "string") {
+            setRecipe(generatedRecipeMarkdown)
+        }
     }
 
     function addIngredient(formData : any){
@@ -32,12 +32,14 @@ export function Main(){
                 />
                 <button> Add ingredient</button>
             </form>
-            
-            {ingredients.length > 0 && <IngredientsList  
-            ingredients={ingredients} 
-            toggleRecipeShown={toggleRecipeShown} /> }
 
-            {recipeShown && <ClaudeRecipe/>}
+            {ingredients.length > 0 && 
+            
+            <IngredientsList 
+            ingredients={ingredients} 
+            getRecipe={getRecipe} /> }
+            
+            {recipe && <ClaudeRecipe recipe={recipe} />}
 
         </main>
     )
