@@ -6,7 +6,6 @@ import { Card } from "./Components/Card";
 import "./index.css"; 
 import logo from "./logo.svg";
 import reactLogo from "./react.svg";
-
 import { createElement } from "react";
 import { Forms } from "./Components/Forms";
 import { ConditionalRendering } from "./Components/ConditionalRendering";
@@ -21,7 +20,9 @@ export function App() {
 
   return (
     <div>
-    <FrontPage/> 
+
+    <FrontPage/>
+     
     {/* <UseState/> */}
     {/* <Array/>  */}
     {/* <Card/> */} 

@@ -1,7 +1,7 @@
 import React from "react"
 import { ClaudeRecipe } from "./ClaudeRecipe";
 import { IngredientsList } from "./IngredientsList";
-import { getRecipeFromMistral } from "./Ai"; // <-- Yeh line Ai.tsx se data la rahi hai
+import { getRecipeFromMistral } from "./Ai";
 
 export function Main(){
     
@@ -10,7 +10,7 @@ export function Main(){
 
     async function getRecipe(){
         const generatedRecipeMarkdown = await getRecipeFromMistral(ingredients)
-        // Ensure string is returned before setting state
+       
         if (typeof generatedRecipeMarkdown === "string") {
             setRecipe(generatedRecipeMarkdown)
         }
