@@ -12,7 +12,7 @@ export async function getRecipeFromMistral(ingredientArr: string[]) {
     const ingredientsString = ingredientArr.join(", ")
     try {
         const response = await hf.chatCompletion({
-            model: "HuggingFaceH4/zephyr-7b-beta",
+            model: "meta-llama/Llama-3.2-3B-Instruct",
             messages: [
                 { role: "system", content: SYSTEM_PROMPT },
                 { role: "user", content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!` },
