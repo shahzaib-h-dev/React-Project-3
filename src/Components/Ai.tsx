@@ -13,6 +13,7 @@ export async function getRecipeFromMistral(ingredientArr: string[]) {
     try {
         const response = await hf.chatCompletion({
             model: "meta-llama/Meta-Llama-3-8B-Instruct",
+            provider: "together",
             messages: [
                 { role: "system", content: SYSTEM_PROMPT },
                 { role: "user", content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!` },
