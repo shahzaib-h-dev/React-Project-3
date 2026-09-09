@@ -4,15 +4,22 @@ import { IngredientsList } from "./IngredientsList";
 import { getRecipeFromMistral } from "./Ai";
 
 export function Main(){
-    
     const [ingredients, setIngredients] = React.useState<string[]>([])
     const [recipe, setRecipe] = React.useState("")
+    
+    // Naya state variable jo API call ka status track karega
+    const [isLoading, setIsLoading] = React.useState(false) 
 
     async function getRecipe(){
-        const generatedRecipeMarkdown = await getRecipeFromMistral(ingredients)
-       
-        if (typeof generatedRecipeMarkdown === "string") {
-            setRecipe(generatedRecipeMarkdown)
+        setIsLoading(true) // API ko request bhejte hi loading ko 'true' kar diya
+        
+        try {
+            const generatedRecipeMarkdown = await getRecipeFromMistral(ingredients)
+            if (typeof generatedRecipeMarkdown === "string") {
+                setRecipe(generatedRecipeMarkdown)
+            }
+        } finally {
+            setIsLoading(false) // Data aane ke baad (ya error aane par) loading ko rok diya
         }
     }
 
@@ -34,13 +41,13 @@ export function Main(){
             </form>
 
             {ingredients.length > 0 && 
-            
             <IngredientsList 
-            ingredients={ingredients} 
-            getRecipe={getRecipe} /> }
+                ingredients={ingredients} 
+                getRecipe={getRecipe} 
+                isLoading={isLoading} // Yahan hum loading status IngredientsList ko bhej rahe hain
+            /> }
             
             {recipe && <ClaudeRecipe recipe={recipe} />}
-
         </main>
     )
 }
