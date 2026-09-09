@@ -394,3 +394,47 @@ body{
 .pad-button:hover {
     background-color: #ffffff;
 }
+
+
+
+/* Container ka design (Background, spacing, aur Flexbox) */
+.recipe-container {
+    display: flex;
+    justify-content: space-between; /* Text left par, button right par */
+    align-items: center; /* Dono ko vertically center karega */
+    background-color: #f4efeb; /* Screenshot jaisa light beige color */
+    padding: 24px 32px;
+    border-radius: 8px; /* Corners gol karne ke liye */
+    margin-top: 30px;
+}
+
+/* Headings aur Paragraph ki styling */
+.recipe-text-content h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #2b2826;
+}
+
+.recipe-text-content p {
+    margin: 6px 0 0 0;
+    color: #6b6662; /* Thora light gray text */
+    font-size: 0.95rem;
+}
+
+/* Button ka design (Orange color, white text, hover effect) */
+.get-recipe-btn {
+    background-color: #d17558; /* Screenshot jaisa orange/brown */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out; /* Smooth color change */
+}
+
+/* Jab user button par mouse laye */
+.get-recipe-btn:hover:not(:disabled) {
+    background-color: #bd6448; 
+}

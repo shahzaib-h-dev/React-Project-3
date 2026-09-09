@@ -10,10 +10,13 @@ export function IngredientsList(props: { ingredients: string[], getRecipe: () =>
 
             {props.ingredients.length > 3 && (
                 <div className="recipe-container">
-                    <div className="recipe-text">
+                    
+                    
+                    <div className="recipe-text-content">
                         <h3>Ready for a recipe?</h3>
                         <p>Generate a recipe from your list of ingredients.</p>
                     </div>
+                    
                     <button 
                         onClick={props.getRecipe} 
                         className="get-recipe-btn"
