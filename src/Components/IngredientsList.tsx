@@ -1,41 +1,32 @@
-import React from "react";
+export function IngredientsList(props: { ingredients: string[], getRecipe: () => void, isLoading: boolean }) {
+    const ingredientListItems = props.ingredients.map(ingredient => (
+        <li key={ingredient}>{ingredient}</li>
+    ));
 
-// TypeScript ko batana ke konsi props aayengi
-type Props = {
-    ingredients: string[];
-    getRecipe: () => void;
-    isLoading: boolean; // Nayi prop ko TypeScript mein define kiya
-}
-
-export function IngredientsList({ ingredients, getRecipe, isLoading }: Props) {
     return (
-        <section>
+        <section className="ingredients-section">
             <h2>Ingredients on hand:</h2>
-            <ul className="ingredients-list" aria-live="polite">
-                {ingredients.map(ingredient => (
-                    <li key={ingredient}>{ingredient}</li>
-                ))}
-            </ul>
-            
-            {ingredients.length > 3 && (
-                <div className="get-recipe-container">
-                    <div>
+            <ul className="ingredients-list">{ingredientListItems}</ul>
+
+            {props.ingredients.length > 3 && (
+                <div className="recipe-container">
+                    <div className="recipe-text">
                         <h3>Ready for a recipe?</h3>
                         <p>Generate a recipe from your list of ingredients.</p>
                     </div>
                     <button 
-                        onClick={getRecipe} 
-                        disabled={isLoading} // Agar loading chal rahi hai, toh button lock (disable) ho jayega
+                        onClick={props.getRecipe} 
+                        className="get-recipe-btn"
+                        disabled={props.isLoading} 
                         style={{ 
-                            cursor: isLoading ? "not-allowed" : "pointer", 
-                            opacity: isLoading ? 0.6 : 1 
+                            cursor: props.isLoading ? "not-allowed" : "pointer",
+                            opacity: props.isLoading ? 0.7 : 1 
                         }}
                     >
-                        {/* Agar loading chal rahi hai toh text change ho jayega */}
-                        {isLoading ? "Generating Recipe..." : "Get a recipe"} 
+                        {props.isLoading ? "Generating Recipe..." : "Get a recipe"}
                     </button>
                 </div>
             )}
         </section>
-    )
+    );
 }
