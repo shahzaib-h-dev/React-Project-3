@@ -14,15 +14,13 @@ import { Counter } from "./Components/Counter";
 import { PracticeStateProp } from "./Components/PracticeStateProp";
 import { Challenge } from "./Components/Challenge";
 
- 
 
 export function App() {
 
   return (
     <div>
 
-    <FrontPage/>
-     
+    <FrontPage/> 
     {/* <UseState/> */}
     {/* <Array/>  */}
     {/* <Card/> */} 
