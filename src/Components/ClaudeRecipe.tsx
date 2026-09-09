@@ -7,7 +7,7 @@ export function ClaudeRecipe({ recipe }: ClaudeRecipeProps) {
     
 const formatText = (text: string) => {
     return text
-        .replace(/^###?\s(.*$)/gim, '<h3 style="color: #d97706; margin-top: 20px; margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;">$1</h3>')
+        .replace(/^###?\s(.*$)/gim, '<h3 style="color: #92400e; margin-top: 20px; margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px;">$1</h3>')
         
         .replace(/\*\*(.*?)\*\*/g, '<strong style="color: #92400e;">$1</strong>')
         
